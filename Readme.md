@@ -4,7 +4,7 @@ Official Go programming language container image optimized for enterprise enviro
 
 **📌 CleanStart Foundation:** Security-hardened, minimal base OS designed for enterprise containerized environments.
 
-**Image Path:** `cleanstart/go`
+**Image Path:** `ghcr.io/cleanstart-containers/go`
 
 **Registry:** CleanStart Registry
 
@@ -61,17 +61,17 @@ Typical scenarios where this container excels:
 
 Download the runtime container images:
 ```bash
-docker pull cleanstart/go:latest
+docker pull ghcr.io/cleanstart-containers/go:latest
 ```
 ```bash
-docker pull cleanstart/go:latest-dev
+docker pull ghcr.io/cleanstart-containers/go:latest-dev
 ```
 
 ### Interactive Development
 
 Start interactive session for development:
 ```bash
-docker run --rm -it --entrypoint /bin/sh cleanstart/go:latest-dev
+docker run --rm -it --entrypoint /bin/sh ghcr.io/cleanstart-containers/go:latest-dev
 ```
 
 You should be inside container shell, execute commands like:
@@ -92,7 +92,7 @@ exit
 
 Start the container:
 ```bash
-docker run --rm -it --name go-web-dev cleanstart/go:latest
+docker run --rm -it --name go-web-dev ghcr.io/cleanstart-containers/go:latest
 ```
 
 ### Development Workflow
@@ -102,12 +102,12 @@ Run with workspace mounted:
 docker run -it --name go-dev \
   -v $(pwd):/workspace \
   -w /workspace \
-  cleanstart/go:latest-dev /bin/sh
+  ghcr.io/cleanstart-containers/go:latest-dev /bin/sh
 ```
 
 Check Go version:
 ```bash
-docker run --rm cleanstart/go:latest-dev go version
+docker run --rm ghcr.io/cleanstart-containers/go:latest-dev go version
 ```
 
 ---
@@ -132,10 +132,10 @@ CleanStart images support multiple architectures to ensure compatibility across 
 
 ### Multi-Platform Images
 ```bash
-docker pull --platform linux/amd64 cleanstart/go:latest
+docker pull --platform linux/amd64 ghcr.io/cleanstart-containers/go:latest
 ```
 ```bash
-docker pull --platform linux/arm64 cleanstart/go:latest
+docker pull --platform linux/arm64 ghcr.io/cleanstart-containers/go:latest
 ```
 
 ---
