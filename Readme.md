@@ -102,7 +102,8 @@ Run with workspace mounted:
 docker run -it --name go-dev \
   -v $(pwd):/workspace \
   -w /workspace \
-  ghcr.io/cleanstart-containers/go:latest-dev /bin/sh
+  --entrypoint /bin/sh \
+  ghcr.io/cleanstart-containers/go:latest-dev
 ```
 
 Check Go version:
